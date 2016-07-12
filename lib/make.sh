@@ -11,7 +11,6 @@ for FILE in /work/keymaps/*.c; do
   if test -f "${NEWFILENAME}"; then
     mv "${NEWFILENAME}" "${NEWFILENAME%.hex}-$(date +%Y.%m.%d-%H:%M:%S -r ${NEWFILENAME}).hex"
   fi
-  ls -A -R .
   cp "${QMK_DIR}/.build/planck_rev4_${NAME}.hex" "$NEWFILENAME"
   cd "${QMK_DIR}" && make clean | ts >> "/work/logs/${NAME}-debug.log" 2>> "/work/logs/${NAME}-error.log"
 done
