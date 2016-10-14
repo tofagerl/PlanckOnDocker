@@ -1,6 +1,11 @@
 # Planck on Docker
 A docker image configured to hit it and quit it for the OLKB Planck. 
 
+# DEPRECATED
+Use the QMK official Docker image instead. 
+
+https://github.com/jackhumbert/qmk_firmware#docker
+
 This image automatically compiles any keymaps put into the `keymaps` folder and puts the firmware in the firmware folder. 
 Existing firmware will be renamed to avoid dataloss.
 
